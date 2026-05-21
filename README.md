@@ -11,4 +11,4 @@
 3. 选择不同``分析选项``后点点击``完整分析``可获取相应结果
 4. 可选择``不使用ai分析``，这时程序只会拉取论文的基本信息【标题、摘要、作者等】
 5. 支持``翻译``和``pdf下载``，下载pdf后文件目录会自动创建output文件夹，可在此路径下面查看，当然程序在可视化页面也提供了打开文件路径入口
-6. ``设置``里可以配置llm和翻译的api，苯人推荐deepseek-v4-pro和百度，在[deepseekAPI开放平台](https://platform.deepseek.com/api_keys)和[百度开发者中心](https://fanyi-api.baidu.com/manage/developer)，因为目前只测试过dp和百度
+6. ``设置``里可以配置llm和翻译的api，苯人推荐deepseek-v4-pro和百度，在[deepseekAPI开放平台](https://platform.deepseek.com/api_keys)和[百度开发者中心](https://fanyi-api.baidu.com/manage/developer)可获取api和key，百度是免费的，deepseek需要充值，但要不了多少钱
