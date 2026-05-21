@@ -21,7 +21,12 @@ from tkinter import ttk, messagebox, filedialog
 import customtkinter as ctk
 
 # ── 路径 ──────────────────────────────────────────────────────
-BASE_DIR = Path(__file__).resolve().parent
+import sys as _sys
+
+if getattr(_sys, "frozen", False):
+    BASE_DIR = Path(_sys.executable).parent
+else:
+    BASE_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(BASE_DIR))
 
 from src.searcher import build_query, search_arxiv

@@ -43,7 +43,7 @@ CUSTOM_TRANSLATE_URL: str = os.getenv("CUSTOM_TRANSLATE_URL", "")
 CUSTOM_TRANSLATE_API_KEY: str = os.getenv("CUSTOM_TRANSLATE_API_KEY", "")
 
 # ── arXiv API ─────────────────────────────────────────────────
-ARXIV_API_URL: str = "http://export.arxiv.org/api/query"
+ARXIV_API_URL: str = "https://export.arxiv.org/api/query"
 ARXIV_RATE_LIMIT: float = 3.1       # seconds between requests
 ARXIV_PAGE_SIZE: int = 100           # arXiv max per page
 ARXIV_TIMEOUT: int = 60              # HTTP timeout seconds

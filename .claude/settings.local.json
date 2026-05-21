@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(python main.py search -q \"retrieval augmented generation\" -f ti -n 3 --sort-by submittedDate -v)",
-      "Bash(python main.py search -q \"retrieval augmented generation\" -f ti -n 5 --sort-by relevance)"
+      "Bash(python main.py search -q \"retrieval augmented generation\" -f ti -n 5 --sort-by relevance)",
+      "Bash(rm -f \"f:/work_documents/Experiment/arXivPaperReader/dist/arXivPaperReader.exe\")",
+      "Bash(F:/work_software/anaconda/envs/build/python -m PyInstaller --onefile --noconsole --clean --name \"arXivPaperReader\" --additional-hooks-dir . --collect-all customtkinter --collect-all numpy --add-binary \"F:/work_software/anaconda/envs/build/Library/bin/libssl-3-x64.dll;.\" --add-binary \"F:/work_software/anaconda/envs/build/Library/bin/libcrypto-3-x64.dll;.\" --add-binary \"F:/work_software/anaconda/envs/build/Library/bin/tcl86t.dll;.\" --add-binary \"F:/work_software/anaconda/envs/build/Library/bin/tk86t.dll;.\" --hidden-import src.searcher --hidden-import src.downloader --hidden-import src.parser --hidden-import src.extractor --hidden-import src.csv_writer --hidden-import src.stats --hidden-import src.models --hidden-import src.config --hidden-import src.translator --hidden-import src.orchestrator --hidden-import requests --hidden-import deep_translator gui.py)"
     ]
   }
 }
