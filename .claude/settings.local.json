@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python main.py search -q \"retrieval augmented generation\" -f ti -n 3 --sort-by submittedDate -v)",
+      "Bash(python main.py search -q \"retrieval augmented generation\" -f ti -n 5 --sort-by relevance)"
+    ]
+  }
+}
