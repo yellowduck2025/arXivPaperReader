@@ -5,7 +5,14 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+import sys as _sys
+
+if getattr(_sys, "frozen", False):
+    # PyInstaller 打包后，exe 所在目录
+    BASE_DIR = Path(_sys.executable).parent
+else:
+    BASE_DIR = Path(__file__).resolve().parent.parent
+
 load_dotenv(BASE_DIR / ".env")
 
 # ── DeepSeek API ──────────────────────────────────────────────

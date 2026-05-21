@@ -1611,11 +1611,12 @@ class ArxivAnalyzerGUI:
         if not rows: return
         self.analysis_rows = rows
         self._populate_idea_stats(rows)
-        self._log(f"统计完成: {len(set(
+        unique_count = len(set(
             t.strip().lower() for r in rows
             for t in re.split(r'\s*;\s*', r.get('idea_tags', ''))
             if t.strip() and t.strip() != FILL_NONE
-        ))} 个唯一标签")
+        ))
+        self._log(f"统计完成: {unique_count} 个唯一标签")
 
     def _populate_idea_stats(self, rows: list[dict]) -> None:
         """仅填充 idea 统计树（不读 CSV，由调用方传入 rows）"""
@@ -2208,7 +2209,7 @@ class ArxivAnalyzerGUI:
 
 
 def main() -> None:
-    if sys.platform == "win32":
+    if sys.platform == "win32" and sys.stdout is not None:
         import codecs
         sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "strict")
         sys.stderr = codecs.getwriter("utf-8")(sys.stderr.buffer, "strict")
